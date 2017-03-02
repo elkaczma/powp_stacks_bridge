@@ -2,7 +2,8 @@ package edu.kis.vh.stacks;
 
 public class StackFIFO extends Stack {
 
-	public Stack temp = new Stack();
+	private Stack temp = new Stack();
+	// po enkapsulacji nastapila zmiana modyfikatora i dodanie gettera/settera	
 	
 	@Override
 	public int pop() {
@@ -12,5 +13,13 @@ public class StackFIFO extends Stack {
 		while (!temp.isEmpty())
 			push(temp.pop());
 		return ret;
+	}
+
+	public Stack getTemp() {
+		return temp;
+	}
+
+	public void setTemp(Stack temp) {
+		this.temp = temp;
 	}
 }
