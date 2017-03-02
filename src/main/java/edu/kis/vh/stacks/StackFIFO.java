@@ -19,7 +19,4 @@ public class StackFIFO extends Stack {
 		return temp;
 	}
 
-	public void setTemp(Stack temp) {
-		this.temp = temp;
-	}
 }
