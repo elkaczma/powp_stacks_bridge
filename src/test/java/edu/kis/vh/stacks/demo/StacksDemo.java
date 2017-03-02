@@ -30,5 +30,7 @@ class StacksDemo {
 				+ ((StackHanoi) stacks[3]).reportRejected());
 		
 	}
-	// zle sformatowane wiersze: 19, 20, 21, 26	
+	// zle sformatowane wiersze: 19, 20, 21, 26
+	// alt + <- cofa kursor do ostatniego miejsca edycji
+	// alt + -> ponawia miejsce kursora	
 }
