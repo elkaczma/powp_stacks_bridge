@@ -2,13 +2,13 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	private static final int STACK_FULL = 11;
+	private static final int FULL_STACK_INDICATOR = 11;
 
-	private static final int STACK_EMPTY = -1;
+	private static final int EMPTY_STACK_INDICATOR = -1;
 
 	private int[] ITEMS = new int[12];	
 
-	public int total = STACK_EMPTY;
+	private int total = EMPTY_STACK_INDICATOR;
 	
 	public void push(int i) {
 		if (!isFull())
@@ -16,22 +16,22 @@ public class Stack {
 	}
 	
 	public boolean isEmpty() {
-		return total == STACK_EMPTY;
+		return total == EMPTY_STACK_INDICATOR;
 	}
 		
 	public boolean isFull() {
-		return total == STACK_FULL;
+		return total == FULL_STACK_INDICATOR;
 	}
 			
 	public int top() {
 		if (isEmpty())
-			return STACK_EMPTY;
+			return EMPTY_STACK_INDICATOR;
 		return ITEMS[total];
 	}
 				
 	public int pop() {
 		if (isEmpty())
-			return STACK_EMPTY;
+			return EMPTY_STACK_INDICATOR;
 		return ITEMS[total--];
 	}
 				
