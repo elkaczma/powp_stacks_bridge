@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 public class StackTest {
 	
@@ -76,5 +78,48 @@ public class StackTest {
 		result = stackObj.pop();
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
-
+	
+	@Test
+	public void testFIFOPop() {
+		DefaultStacksFactory factory = new DefaultStacksFactory();
+		Stack stackObj = factory.GetFIFOStack();
+		final int EMPTY_STACK_VALUE = -1;
+		
+		int result = stackObj.pop();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		
+		int testValue = 4;
+		stackObj.push(testValue);
+		
+		result = stackObj.pop();
+		Assert.assertEquals(testValue, result);
+		result = stackObj.pop();
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
+	
+	@Test
+	public void testHanoiPush() {
+		DefaultStacksFactory factory = new DefaultStacksFactory();
+		Stack stackObj = factory.GetHanoiStack();
+		int testValue = 4;
+		stackObj.push(testValue);
+		
+		int result = stackObj.top();
+		Assert.assertEquals(testValue, result);
+	}
+	
+	@Test
+	public void testReportRejected() {
+		DefaultStacksFactory factory = new DefaultStacksFactory();
+		Stack stackObj = factory.GetHanoiStack();
+		final int REPORTED_REJECTED = 1;
+		
+		int testValue1 = 4;
+		stackObj.push(testValue1);
+		int testValue2 = 5;
+		stackObj.push(testValue2);
+		
+		int result = ((StackHanoi)stackObj).reportRejected();
+		Assert.assertEquals(REPORTED_REJECTED, result);
+	}
 }
