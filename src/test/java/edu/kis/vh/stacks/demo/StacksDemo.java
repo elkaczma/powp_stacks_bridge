@@ -9,6 +9,14 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		
+		testStacks(factory);
+		
+	}
+	// zle sformatowane wiersze: 19, 20, 21, 26
+	// alt + <- cofa kursor do ostatniego miejsca edycji
+	// alt + -> ponawia miejsce kursora	
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(),
 				factory.GetFIFOStack(), factory.GetHanoiStack()};
 		
@@ -28,9 +36,5 @@ class StacksDemo {
 		
 		System.out.println("total rejected is "
 				+ ((StackHanoi) stacks[3]).reportRejected());
-		
 	}
-	// zle sformatowane wiersze: 19, 20, 21, 26
-	// alt + <- cofa kursor do ostatniego miejsca edycji
-	// alt + -> ponawia miejsce kursora	
 }
