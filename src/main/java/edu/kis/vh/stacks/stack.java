@@ -38,34 +38,34 @@ public class Stack {
 //		return stackArray.pop();
 //	}
 	
-	private StackList stackList;
+	private IStack iStack;
 
-	public Stack(StackList stackList) {
-		this.stackList = stackList;
+	public Stack(IStack iStack) {
+		this.iStack = iStack;
 	}
 	
 	public Stack() {
-		this.stackList = new StackList();
+		this.iStack = new StackList();
 	}
 
 	public void push(int i) {
-		stackList.push(i);
+		iStack.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackList.isEmpty();
+		return iStack.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackList.isFull();
+		return iStack.isFull();
 	}
 
 	public int top() {
-		return stackList.top();
+		return iStack.top();
 	}
 
 	public int pop() {
-		return stackList.pop();
+		return iStack.pop();
 	}
 	
 	// F3 otwiera implementacje wywolywanej metody w StackArray.java
