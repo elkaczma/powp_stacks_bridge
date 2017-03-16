@@ -35,5 +35,6 @@ public class Stack {
 	public int pop() {
 		return stackArray.pop();
 	}	
-		
+	
+	// F3 otwiera implementacje wywolywanej metody w StackArray.java
 }
