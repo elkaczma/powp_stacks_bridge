@@ -69,4 +69,6 @@ public class Stack {
 	}
 	
 	// F3 otwiera implementacje wywolywanej metody w StackArray.java
+	
+	// Zmiana z podpunktu 3.1.6 zmienia implementacje metod klasy Stack na rzecz wywolan metod klas implementujacych interfejs IStack
 }
