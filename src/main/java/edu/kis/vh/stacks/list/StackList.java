@@ -6,7 +6,7 @@ public class StackList {
 	Node last;
 	int i;
 
-	private void pushElement(int i) {
+	public void pushElement(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -16,21 +16,21 @@ public class StackList {
 		}
 	}
 
-	private boolean empty() {
+	public boolean empty() {
 		return last == null;
 	}
 
-	private boolean full() {
+	public boolean full() {
 		return false;
 	}
 
-	private int peek() {
+	public int peek() {
 		if (empty())
 			return EMPTY_STACK_INDICATOR;
 		return last.value;
 	}
 
-	private int pop() {
+	public int pop() {
 		if (empty())
 			return EMPTY_STACK_INDICATOR;
 		int ret = last.value;
