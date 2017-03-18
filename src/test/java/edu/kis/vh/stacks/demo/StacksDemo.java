@@ -43,4 +43,6 @@ class StacksDemo {
 		System.out.println("total rejected is "
 				+ ((StackHanoi) stacks[3]).reportRejected());
 	}
+	
+	// 3.1.17: Zasade izolacji lamia klasy fabryk - zwracane abstrakcje stosow sa uzaleznione od implementacji (StackArray lub StackList).
 }
