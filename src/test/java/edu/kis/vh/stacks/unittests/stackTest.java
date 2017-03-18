@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 public class StackTest {
@@ -33,7 +34,8 @@ public class StackTest {
 
 	@Test
 	public void testIsFull() {
-		Stack stackObj = new Stack();
+		ArrayStacksFactory arrayStacksFactory = new ArrayStacksFactory();
+		Stack stackObj = arrayStacksFactory.GetStandardStack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();		
@@ -43,6 +45,7 @@ public class StackTest {
 		
 		boolean result = stackObj.isFull();
 		Assert.assertEquals(true, result);
+		// zmiany w tescie: test sprawdza dzialanie metody isFull() dla stosu implementujacego StackArray
 	}
 
 	@Test
@@ -122,4 +125,7 @@ public class StackTest {
 		int result = ((StackHanoi)stackObj).reportRejected();
 		Assert.assertEquals(REPORTED_REJECTED, result);
 	}
+	
+	// 3.2.1: Niektore testy konczyly sie porazka. W celu poprawy przywrocono wartosc
+	// EMPTY_STACK_INDICATOR na -1 w interfejsie IStack (zmiana na 0 wynikala z podpunktu 11)
 }
