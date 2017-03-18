@@ -6,8 +6,6 @@ public class StackArray implements IStack {
 	
 	private static final int FULL_STACK_INDICATOR = 11;
 
-	private static final int EMPTY_STACK_INDICATOR = -1;
-
 	private int[] ITEMS = new int[12];	
 
 	private int total = EMPTY_STACK_INDICATOR; // total moze byc prywatne
