@@ -71,4 +71,8 @@ public class Stack {
 	// F3 otwiera implementacje wywolywanej metody w StackArray.java
 	
 	// Zmiana z podpunktu 3.1.6 zmienia implementacje metod klasy Stack na rzecz wywolan metod klas implementujacych interfejs IStack
+	
+	// 3.1.13: F3 otwiera deklaracje metod w interfejsie,
+	// Open Hierarchy (CTRL+T) wyswietla interfejsy i klasy implementujace metody,
+	// CTRL+Kursor pozwala otworzyc miejsce deklaracji lub implementacji metody 
 }
