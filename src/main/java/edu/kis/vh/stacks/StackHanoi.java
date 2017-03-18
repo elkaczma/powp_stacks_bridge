@@ -10,6 +10,16 @@ public class StackHanoi extends Stack {
 
 	private int totalRejected = 0;
 
+	public StackHanoi() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public StackHanoi(IStack iStack) {
+		super(iStack);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * @return liczba odrzuconych elementow podczas prob dodania na stos
 	 */
