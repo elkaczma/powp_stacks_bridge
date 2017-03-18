@@ -1,9 +1,12 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.impl.StackList;
+
 public class StackFIFO extends Stack {
 
-	private Stack temp = new Stack();
-	// po enkapsulacji nastapila zmiana modyfikatora i dodanie gettera/settera	
+	private Stack temp = new Stack(new StackList());
+	// po enkapsulacji nastapila zmiana modyfikatora i dodanie gettera/settera
+	// 3.1.14: Lepszym wyborem bedzie StackList ze wzgledu na wieksza wydajnosc i brak ograniczen liczby elementow.
 	
 	public StackFIFO() {
 		super();
